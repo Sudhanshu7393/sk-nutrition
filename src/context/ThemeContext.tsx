@@ -19,7 +19,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   useEffect(() => {
     setMounted(true);
     try {
-      const saved = localStorage.getItem("sk_theme") as ThemeMode | null;
+      const saved = localStorage.getItem("sk_theme_v2") as ThemeMode | null;
       if (saved === "light" || saved === "dark") {
         setThemeState(saved);
         applyTheme(saved);
@@ -52,7 +52,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     setThemeState(newTheme);
     applyTheme(newTheme);
     try {
-      localStorage.setItem("sk_theme", newTheme);
+      localStorage.setItem("sk_theme_v2", newTheme);
     } catch {}
   };
 
@@ -62,7 +62,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   };
 
   return (
-    <ThemeContext.Provider value={{ theme: mounted ? theme : "dark", toggleTheme, setTheme }}>
+    <ThemeContext.Provider value={{ theme: mounted ? theme : "light", toggleTheme, setTheme }}>
       {children}
     </ThemeContext.Provider>
   );
@@ -72,7 +72,7 @@ export const useTheme = () => {
   const ctx = useContext(ThemeContext);
   if (!ctx) {
     return {
-      theme: "dark" as ThemeMode,
+      theme: "light" as ThemeMode,
       toggleTheme: () => {},
       setTheme: () => {},
     };
