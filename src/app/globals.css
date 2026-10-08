@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+:root {
+  --rn-cream: #FAF7F1;
+  --rn-cream-2: #F2ECE0;
+  --rn-white: #FFFFFF;
+  --rn-ink: #1B1A17;
+  --rn-muted: #6B6559;
+  --rn-gold: #C99A3C;
+  --rn-gold-deep: #A07524;
+  --rn-gold-soft: #FBF4E4;
+  --rn-line: #ECE5D8;
+  --rn-success: #128A43;
+}
+
+body {
+  background-color: var(--rn-cream);
+  color: var(--rn-ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--rn-cream-2);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--rn-gold);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--rn-gold-deep);
+}
+
+/* 3D Shining Border & Metallic Glow */
+@keyframes border-shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes light-sweep {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(250%) skewX(-20deg);
+    opacity: 0;
+  }
+}
+
+.animate-border-shine {
+  background-size: 200% 200%;
+  animation: border-shine 5s ease infinite;
+}
+
+.card-3d-glow {
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7), 0 0 20px -5px rgba(163, 230, 53, 0.2);
+}
+
+.card-3d-glow:hover {
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.85), 0 0 35px 2px rgba(163, 230, 53, 0.45);
+}
+

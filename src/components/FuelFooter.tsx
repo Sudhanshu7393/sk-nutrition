@@ -1,0 +1,209 @@
+"use client";
+
+import React from "react";
+import { SITE_CONFIG } from "@/data/config";
+import { MapPin, Phone, MessageCircle, Clock, ShieldCheck, Truck } from "lucide-react";
+import { useCart } from "@/context/CartContext";
+
+export function FuelFooter() {
+  const { setSelectedCategoryTab, setIsTrackOrderModalOpen } = useCart();
+
+  const handleNavClick = (tabId: string) => {
+    setSelectedCategoryTab(tabId);
+    const el = document.getElementById("featured-products");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
+
+  return (
+    <footer className="bg-black text-white border-t border-zinc-900 font-sans text-xs">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 lg:gap-10">
+          {/* Col 1: Brand Info */}
+          <div className="col-span-2 space-y-4">
+            <div>
+              <span className="text-xl sm:text-2xl font-black italic tracking-tighter uppercase leading-none block">
+                S.K <span className="text-[#A3E635]">NUTRITION</span>
+              </span>
+              <span className="text-[9px] font-bold tracking-widest text-zinc-400 uppercase mt-0.5 block">
+                Stronger. Everyday. • Authorised Peakvitals Partner
+              </span>
+            </div>
+
+            <p className="text-zinc-400 leading-relaxed text-xs max-w-sm">
+              Mughalsarai &amp; Chandauli&apos;s premier performance store exclusively for{" "}
+              <strong className="text-white">Peakvitals Nutrition Pre-Workout</strong>. High-stimulant, clinically dosed active grams with direct factory supply.
+            </p>
+
+            <div className="space-y-1.5 text-zinc-400 pt-1">
+              <p className="flex items-start gap-2">
+                <MapPin className="w-3.5 h-3.5 text-[#A3E635] shrink-0 mt-0.5" />
+                <span>{SITE_CONFIG.address} (Landmark: {SITE_CONFIG.landmark})</span>
+              </p>
+              <p className="flex items-center gap-2">
+                <Phone className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                <span>Call/WhatsApp: {SITE_CONFIG.phone}</span>
+              </p>
+              <p className="flex items-center gap-2">
+                <Clock className="w-3.5 h-3.5 text-[#EA580C] shrink-0" />
+                <span>Hours: {SITE_CONFIG.hours}</span>
+              </p>
+            </div>
+          </div>
+
+          {/* Col 2: Shop Flavours */}
+          <div className="space-y-3">
+            <h4 className="font-black uppercase tracking-wider text-white text-[11px]">
+              Shop Flavours
+            </h4>
+            <ul className="space-y-2 text-zinc-400">
+              <li>
+                <button
+                  onClick={() => handleNavClick("high-stim")}
+                  className="hover:text-[#A3E635] transition cursor-pointer"
+                >
+                  Green Apple (Original)
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleNavClick("high-stim")}
+                  className="hover:text-[#A3E635] transition cursor-pointer"
+                >
+                  Blue Raspberry Blast
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleNavClick("pump")}
+                  className="hover:text-[#A3E635] transition cursor-pointer"
+                >
+                  Watermelon Punch
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleNavClick("endurance")}
+                  className="hover:text-[#A3E635] transition cursor-pointer"
+                >
+                  Tangy Orange Citrus
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleNavClick("combo")}
+                  className="hover:text-[#A3E635] transition cursor-pointer text-[#A3E635]"
+                >
+                  Twin &amp; Triple Bundles
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          {/* Col 3: Workout Goals */}
+          <div className="space-y-3">
+            <h4 className="font-black uppercase tracking-wider text-white text-[11px]">
+              Workout Goals
+            </h4>
+            <ul className="space-y-2 text-zinc-400">
+              <li>
+                <button
+                  onClick={() => handleNavClick("high-stim")}
+                  className="hover:text-[#A3E635] transition cursor-pointer"
+                >
+                  Extreme Energy &amp; Focus
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleNavClick("pump")}
+                  className="hover:text-[#A3E635] transition cursor-pointer"
+                >
+                  Nitric Oxide Muscle Pump
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleNavClick("endurance")}
+                  className="hover:text-[#A3E635] transition cursor-pointer"
+                >
+                  Lactic Acid Buffer &amp; Stamina
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleNavClick("combo")}
+                  className="hover:text-[#A3E635] transition cursor-pointer"
+                >
+                  Bulk Gym Value Savings
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          {/* Col 4: Support & Delivery */}
+          <div className="space-y-3">
+            <h4 className="font-black uppercase tracking-wider text-white text-[11px]">
+              Customer Care
+            </h4>
+            <ul className="space-y-2 text-zinc-400">
+              <li>
+                <button
+                  onClick={() => setIsTrackOrderModalOpen(true)}
+                  className="hover:text-[#A3E635] transition cursor-pointer flex items-center gap-1.5"
+                >
+                  <Truck className="w-3.5 h-3.5 text-[#A3E635]" />
+                  <span>Track My Order (SK-ID)</span>
+                </button>
+              </li>
+              <li>
+                <a
+                  href={`https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${encodeURIComponent(
+                    "Hello S.K Nutrition Support Team! 👋\n\nI need assistance regarding Peakvitals Pre-Workout flavours, batch verification, or delivery to my PIN code.\n\nPlease guide me!"
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#A3E635] transition flex items-center gap-1.5 cursor-pointer"
+                >
+                  <MessageCircle className="w-3.5 h-3.5 text-emerald-400" />
+                  <span>WhatsApp Support</span>
+                </a>
+              </li>
+              <li>
+                <a href="#store-location" className="hover:text-[#A3E635] transition">
+                  Store Directions
+                </a>
+              </li>
+              <li>
+                <span className="text-zinc-500">Same-Day Mughalsarai Dispatch</span>
+              </li>
+              <li>
+                <span className="text-zinc-500">Cash on Delivery (COD)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Payment Badges & Bottom Strip */}
+        <div className="pt-10 mt-10 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-zinc-500 text-[11px]">
+          <p>© {new Date().getFullYear()} S.K NUTRITION. All Rights Reserved. Exclusively Peakvitals Pre-Workout.</p>
+
+          <div className="flex flex-wrap items-center gap-2 text-zinc-400 font-bold">
+            <span className="px-2 py-1 rounded bg-zinc-900 border border-zinc-800 text-[10px]">
+              💵 Cash on Delivery
+            </span>
+            <span className="px-2 py-1 rounded bg-zinc-900 border border-zinc-800 text-[10px]">
+              📱 UPI / GPay / PhonePe
+            </span>
+            <span className="px-2 py-1 rounded bg-zinc-900 border border-zinc-800 text-[10px] text-emerald-400">
+              [🟢] 100% Vegetarian
+            </span>
+          </div>
+
+          <p className="text-[10px] text-zinc-400">
+            Made for the Driven. Built for Results.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}
