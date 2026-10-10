@@ -225,11 +225,17 @@ export function FuelHero({ onShopNow }: FuelHeroProps) {
           {/* Right Column: Studio Packshot with 3D Glowing Pedestal */}
           <div className="lg:col-span-5 relative flex items-center justify-center">
             <div className="relative w-full max-w-md h-[460px] flex items-center justify-center">
-              {/* Soft Ambient Spotlight */}
-              <div className="absolute inset-0 bg-radial from-[#A3E635]/15 via-transparent to-transparent rounded-full blur-3xl pointer-events-none" />
+              {/* 3D Glowing Ambient Halo */}
+              <div className="absolute inset-0 bg-radial from-[#A3E635]/20 via-[#EA580C]/10 to-transparent rounded-full blur-2xl pointer-events-none" />
 
-              {/* Natural Studio Floor Shadow */}
-              <div className="absolute bottom-6 w-72 h-4 bg-black/40 dark:bg-black/80 rounded-full blur-md pointer-events-none" />
+              {/* 3D Illuminated Floating Floor Pedestal */}
+              <div className="absolute bottom-6 w-80 h-16 bg-gradient-to-r from-[#A3E635]/25 via-[#EA580C]/35 to-[#A3E635]/25 rounded-full blur-xl pointer-events-none animate-pulse" />
+              <div className="absolute bottom-10 w-72 h-7 border border-[#A3E635]/50 rounded-full shadow-[0_0_25px_#A3E635] pointer-events-none" />
+              <div
+                className={`absolute bottom-12 w-56 h-3 rounded-full blur-xs pointer-events-none ${
+                  theme === "dark" ? "bg-black/90" : "bg-zinc-400/60"
+                }`}
+              />
 
               <Image
                 src="/images/peakvitals_trans/green_apple.png"
