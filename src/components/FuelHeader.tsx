@@ -32,10 +32,10 @@ export function FuelHeader() {
   return (
     <header className="sticky top-0 z-50 font-sans">
       {/* 1. Top Announcement Bar */}
-      <div className="bg-black text-[#A3E635] text-[10px] sm:text-[11px] font-bold py-1 sm:py-1.5 px-3 sm:px-4 text-center border-b border-zinc-900 flex items-center justify-center gap-1.5 sm:gap-2 tracking-wider uppercase">
-        <Truck className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#A3E635] shrink-0" />
-        <span className="hidden sm:inline">🇮🇳 ALL INDIA EXPRESS DELIVERY • DIRECT WHATSAPP ORDER &amp; UPI QR DEAL • 100% GENUINE PEAKVITALS DIRECT</span>
-        <span className="sm:hidden truncate">🇮🇳 ALL INDIA DELIVERY • DIRECT WHATSAPP ORDER &amp; UPI QR</span>
+      <div className="bg-black text-[#A3E635] text-[10px] sm:text-[11px] font-bold py-1 sm:py-1.5 px-3 text-center border-b border-zinc-900 flex items-center justify-center gap-1.5 tracking-wider uppercase overflow-hidden">
+        <Truck className="w-3 h-3 text-[#A3E635] shrink-0" />
+        <span className="hidden md:inline">🇮🇳 ALL INDIA EXPRESS DELIVERY • DIRECT WHATSAPP ORDER &amp; UPI QR DEAL • 100% GENUINE PEAKVITALS DIRECT</span>
+        <span className="md:hidden text-[10px] font-bold tracking-wide truncate">🇮🇳 ALL INDIA DELIVERY • WHATSAPP ORDER &amp; UPI QR</span>
       </div>
 
       {/* 2. Main Navigation Bar */}
