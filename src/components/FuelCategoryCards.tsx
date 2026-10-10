@@ -62,7 +62,7 @@ export function FuelCategoryCards() {
 
   return (
     <section
-      className={`py-10 border-b font-sans relative overflow-hidden transition-colors duration-300 ${
+      className={`py-8 sm:py-10 border-b font-sans relative overflow-hidden transition-colors duration-300 ${
         theme === "dark" ? "bg-zinc-950 border-zinc-800 text-white" : "bg-zinc-100 border-zinc-200 text-zinc-900"
       }`}
     >
@@ -74,25 +74,25 @@ export function FuelCategoryCards() {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-4">
           {cards.map((c, i) => (
             <div
               key={i}
               onClick={() => handleCardClick(c)}
-              className={`p-[2px] rounded-3xl card-3d-glow animate-border-shine transition-all duration-500 cursor-pointer group shadow-lg hover:-translate-y-1.5 flex flex-col ${
+              className={`p-[1.5px] rounded-2xl sm:rounded-3xl card-3d-glow transition-all duration-300 cursor-pointer group shadow-sm hover:-translate-y-1 flex flex-col ${
                 theme === "dark"
-                  ? "bg-gradient-to-br from-zinc-700/80 via-zinc-800 to-zinc-900 hover:from-[#A3E635] hover:via-white/40 hover:to-[#EA580C]"
-                  : "bg-gradient-to-br from-zinc-300 via-zinc-200 to-zinc-400 hover:from-[#A3E635] hover:via-white hover:to-[#EA580C] shadow-zinc-200/80"
+                  ? "bg-gradient-to-br from-zinc-700/80 via-zinc-800 to-zinc-900 hover:from-[#A3E635] hover:to-[#EA580C]"
+                  : "bg-gradient-to-br from-zinc-200 via-zinc-100 to-zinc-300 hover:from-[#A3E635] hover:to-[#EA580C] shadow-zinc-200/80"
               }`}
             >
               <div
-                className={`h-full p-3.5 sm:p-4 rounded-[22px] flex flex-col justify-between relative overflow-hidden ${
+                className={`h-full p-2.5 sm:p-4 rounded-[14px] sm:rounded-[22px] flex flex-col justify-between relative overflow-hidden ${
                   theme === "dark" ? "bg-gradient-to-b from-zinc-900 via-zinc-950 to-black" : "bg-white shadow-xs"
                 }`}
               >
                 {/* 3D Showcase Pod for transparent jar */}
                 <div
-                  className={`relative w-full h-32 sm:h-38 mb-3 rounded-2xl border flex items-center justify-center overflow-hidden transition-colors ${
+                  className={`relative w-full h-24 sm:h-38 mb-2 sm:mb-3 rounded-xl sm:rounded-2xl border flex items-center justify-center overflow-hidden transition-colors ${
                     theme === "dark"
                       ? "bg-gradient-to-b from-zinc-950 via-zinc-900/60 to-black border-zinc-800 group-hover:border-[#A3E635]/50"
                       : "bg-gradient-to-b from-zinc-100 via-zinc-50 to-zinc-200/50 border-zinc-200 group-hover:border-[#A3E635]/80"
@@ -102,26 +102,23 @@ export function FuelCategoryCards() {
                   <div className="absolute inset-0 bg-radial from-[#A3E635]/20 to-transparent pointer-events-none group-hover:scale-125 transition-transform duration-500" />
                   {/* 3D floor shadow */}
                   <div
-                    className={`absolute bottom-1.5 w-3/4 h-2.5 rounded-full blur-xs ${
+                    className={`absolute bottom-1 w-3/4 h-2 rounded-full blur-xs ${
                       theme === "dark" ? "bg-black/95" : "bg-zinc-400/60"
                     }`}
                   />
-
-                  {/* 3D Light Sweep Reflection */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
 
                   <Image
                     src={c.img}
                     alt={c.title}
                     fill
-                    className={`object-contain p-2 group-hover:scale-110 group-hover:-translate-y-1.5 transition-all duration-300 ${
+                    className={`object-contain p-1.5 sm:p-2 group-hover:scale-105 transition-all duration-300 ${
                       theme === "dark"
-                        ? "filter drop-shadow-[0_15px_20px_rgba(0,0,0,0.95)]"
-                        : "filter drop-shadow-[0_12px_16px_rgba(0,0,0,0.2)]"
+                        ? "filter drop-shadow-[0_12px_16px_rgba(0,0,0,0.9)]"
+                        : "filter drop-shadow-[0_10px_14px_rgba(0,0,0,0.15)]"
                     }`}
                   />
                   <span
-                    className={`absolute top-1.5 right-1.5 text-[8px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full border z-10 shadow-md ${
+                    className={`absolute top-1 right-1 sm:top-1.5 sm:right-1.5 text-[7px] sm:text-[8px] font-black uppercase tracking-wider px-1.5 sm:px-2 py-0.5 rounded-full border z-10 shadow-xs ${
                       theme === "dark"
                         ? "bg-zinc-900/95 border-zinc-700 text-[#A3E635]"
                         : "bg-white border-zinc-300 text-emerald-700"
@@ -133,7 +130,7 @@ export function FuelCategoryCards() {
 
                 <div>
                   <h3
-                    className={`font-black text-xs sm:text-sm uppercase tracking-tight transition-colors ${
+                    className={`font-black text-[11px] sm:text-sm uppercase tracking-tight transition-colors truncate ${
                       theme === "dark"
                         ? "text-white group-hover:text-[#A3E635]"
                         : "text-zinc-900 group-hover:text-emerald-600"
@@ -142,7 +139,7 @@ export function FuelCategoryCards() {
                     {c.title}
                   </h3>
                   <p
-                    className={`text-[11px] mt-0.5 leading-snug line-clamp-1 font-medium ${
+                    className={`text-[10px] sm:text-[11px] mt-0.5 leading-tight line-clamp-1 font-medium ${
                       theme === "dark" ? "text-zinc-400" : "text-zinc-500"
                     }`}
                   >
@@ -150,14 +147,14 @@ export function FuelCategoryCards() {
                   </p>
 
                   <div
-                    className={`mt-3 flex items-center gap-1 text-[11px] font-black uppercase tracking-wider transition-colors ${
+                    className={`mt-2 sm:mt-3 flex items-center gap-1 text-[10px] sm:text-[11px] font-black uppercase tracking-wider transition-colors ${
                       theme === "dark"
                         ? "text-[#A3E635] group-hover:text-white"
                         : "text-emerald-600 group-hover:text-zinc-900"
                     }`}
                   >
                     <span>SHOP NOW</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
               </div>

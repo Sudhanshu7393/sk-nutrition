@@ -34,61 +34,56 @@ export function IndianPincodeChecker() {
 
   return (
     <div
-      className={`border-y py-3 px-4 sm:px-8 font-sans transition-colors duration-300 ${
+      className={`border-y py-2.5 sm:py-3 px-3 sm:px-8 font-sans transition-colors duration-300 ${
         theme === "dark"
           ? "bg-zinc-900/90 border-zinc-800/80 text-white"
           : "bg-white border-zinc-200 text-zinc-900 shadow-xs"
       }`}
     >
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-xs">
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2.5 text-xs">
         {/* Left: Quick Label + Live Detected Location */}
-        <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+        <div className="flex flex-wrap items-center gap-1.5 sm:gap-3">
           <div
-            className={`flex items-center gap-1.5 font-bold uppercase tracking-wider text-[11px] ${
+            className={`flex items-center gap-1 font-bold uppercase tracking-wider text-[10px] sm:text-[11px] ${
               theme === "dark" ? "text-zinc-400" : "text-zinc-600"
             }`}
           >
-            <Globe2 className="w-3.5 h-3.5 text-[#A3E635]" />
-            <span>All India Delivery:</span>
+            <Globe2 className="w-3.5 h-3.5 text-[#A3E635] shrink-0" />
+            <span className="shrink-0">All India Delivery:</span>
           </div>
 
           {pincodeInfo && pincodeInfo.valid ? (
             <div
-              className={`flex items-center gap-2 px-3 py-1 rounded-full border text-[11px] ${
+              className={`flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 rounded-full border text-[10px] sm:text-[11px] max-w-full overflow-hidden ${
                 theme === "dark"
                   ? "bg-zinc-950 border-zinc-700/80 text-zinc-300"
                   : "bg-zinc-50 border-zinc-300 text-zinc-800 shadow-xs"
               }`}
             >
-              <span className="flex items-center gap-1 text-emerald-600 dark:text-[#A3E635] font-black">
+              <span className="flex items-center gap-1 text-emerald-600 dark:text-[#A3E635] font-black truncate">
                 <MapPin className="w-3 h-3 shrink-0" />
-                {pincodeInfo.area ? `${pincodeInfo.area}, ` : ""}
-                {pincodeInfo.district}, {pincodeInfo.state}
+                <span className="truncate">{pincodeInfo.district}, {pincodeInfo.state}</span>
               </span>
               <span className="text-zinc-400">•</span>
-              <span className="font-semibold flex items-center gap-1">
+              <span className="font-semibold flex items-center gap-1 shrink-0">
                 {pincodeInfo.isLocal ? (
                   <Zap className="w-3 h-3 text-[#A3E635]" />
                 ) : (
                   <Truck className="w-3 h-3 text-orange-500" />
                 )}
-                {pincodeInfo.isLocal ? "Same-Day Delivery" : "2-4 Days Express"}
-              </span>
-              <span className="text-zinc-400">•</span>
-              <span className="text-emerald-500 font-bold flex items-center gap-1">
-                <CheckCircle2 className="w-3 h-3" /> Fast WhatsApp Dispatch
+                <span>{pincodeInfo.isLocal ? "Same-Day" : "2-4 Days"}</span>
               </span>
             </div>
           ) : (
-            <span className={theme === "dark" ? "text-zinc-400 font-medium" : "text-zinc-500 font-medium"}>
-              Check delivery speed &amp; WhatsApp dispatch for your pincode:
+            <span className={`text-[11px] ${theme === "dark" ? "text-zinc-400 font-medium" : "text-zinc-500 font-medium"}`}>
+              Enter pincode to check dispatch speed:
             </span>
           )}
         </div>
 
-        {/* Right: Ultra-Compact Input Form */}
-        <form onSubmit={handleSubmit} className="flex items-center gap-1.5 self-start md:self-auto shrink-0">
-          <div className="relative w-36 sm:w-44">
+        {/* Right: Compact Input Form */}
+        <form onSubmit={handleSubmit} className="flex items-center gap-1.5 shrink-0 w-full sm:w-auto">
+          <div className="relative flex-1 sm:w-40">
             <input
               type="text"
               value={inputVal}

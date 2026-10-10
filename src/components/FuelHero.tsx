@@ -13,40 +13,40 @@ export function FuelHero({ onShopNow }: FuelHeroProps) {
   const { theme } = useTheme();
 
   return (
-    <section className={`relative overflow-hidden py-10 sm:py-16 lg:py-20 border-b font-sans transition-colors duration-300 ${theme === "dark" ? "bg-black text-white border-zinc-900" : "bg-white text-zinc-900 border-zinc-200"}`}>
+    <section className={`relative overflow-hidden py-8 sm:py-16 lg:py-20 border-b font-sans transition-colors duration-300 ${theme === "dark" ? "bg-black text-white border-zinc-900" : "bg-white text-zinc-900 border-zinc-200"}`}>
       {/* Subtle gym background radial glow */}
       <div className="absolute top-1/2 left-1/4 -translate-y-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-lime-500/10 via-orange-500/5 to-transparent rounded-full blur-3xl pointer-events-none" />
       <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] bg-zinc-900/40 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-center">
           {/* Left Column: Bold Typography & Features */}
-          <div className="lg:col-span-7 space-y-6 sm:space-y-8">
-            {/* Huge 3-Tone Headline */}
+          <div className="lg:col-span-7 space-y-4 sm:space-y-6 lg:space-y-8">
+            {/* 3-Tone Headline */}
             <div className="space-y-0 tracking-tighter">
-              <h1 className={`text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black italic uppercase leading-none block drop-shadow-sm ${theme === "dark" ? "text-white" : "text-zinc-950"}`}>
+              <h1 className={`text-3xl sm:text-6xl md:text-7xl lg:text-8xl font-black italic uppercase leading-[0.95] block drop-shadow-sm ${theme === "dark" ? "text-white" : "text-zinc-950"}`}>
                 DISCIPLINE.
               </h1>
-              <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black italic uppercase leading-none block text-[#A3E635] drop-shadow-sm">
+              <h1 className="text-3xl sm:text-6xl md:text-7xl lg:text-8xl font-black italic uppercase leading-[0.95] block text-[#A3E635] drop-shadow-sm">
                 NUTRITION.
               </h1>
-              <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black italic uppercase leading-none block text-[#EA580C] drop-shadow-sm">
+              <h1 className="text-3xl sm:text-6xl md:text-7xl lg:text-8xl font-black italic uppercase leading-[0.95] block text-[#EA580C] drop-shadow-sm">
                 DOMINATION.
               </h1>
             </div>
 
             {/* Subtitle */}
             <div className="space-y-1">
-              <p className={`text-base sm:text-xl font-black uppercase tracking-wider ${theme === "dark" ? "text-zinc-100" : "text-zinc-900"}`}>
+              <p className={`text-xs sm:text-base lg:text-xl font-black uppercase tracking-wider ${theme === "dark" ? "text-zinc-100" : "text-zinc-900"}`}>
                 PREMIUM SUPPLEMENTS. REAL RESULTS.
               </p>
-              <p className={`text-xs sm:text-sm font-medium max-w-lg ${theme === "dark" ? "text-zinc-400" : "text-zinc-600"}`}>
+              <p className={`text-xs sm:text-sm font-medium max-w-lg leading-relaxed ${theme === "dark" ? "text-zinc-400" : "text-zinc-600"}`}>
                 Clinically dosed Peakvitals Nutrition Pre-Workout. Formulated for aggressive focus, explosive nitric oxide muscle pumps, and zero post-workout crash.
               </p>
             </div>
 
             {/* 4 Feature Badges */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-0.5">
               {[
                 { icon: Leaf, label: "Clean Ingredients" },
                 { icon: FlaskConical, label: "Lab Tested" },
@@ -57,14 +57,14 @@ export function FuelHero({ onShopNow }: FuelHeroProps) {
                 return (
                   <div
                     key={idx}
-                    className={`flex items-center gap-2 p-2 rounded-xl border transition ${
+                    className={`flex items-center gap-1.5 p-2 rounded-xl border transition ${
                       theme === "dark"
                         ? "bg-zinc-900/80 border-zinc-800 text-zinc-300"
                         : "bg-zinc-100 border-zinc-200 text-zinc-800"
                     }`}
                   >
-                    <Icon className="w-4 h-4 text-[#A3E635] shrink-0" />
-                    <span className="text-[10px] sm:text-[11px] font-black uppercase leading-tight">
+                    <Icon className="w-3.5 h-3.5 text-[#A3E635] shrink-0" />
+                    <span className="text-[10px] sm:text-[11px] font-black uppercase leading-tight truncate">
                       {badge.label}
                     </span>
                   </div>
@@ -73,27 +73,27 @@ export function FuelHero({ onShopNow }: FuelHeroProps) {
             </div>
 
             {/* CTA Button & Pricing Pill */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            <div className="flex flex-row items-center gap-3 pt-1">
               <button
                 onClick={onShopNow}
-                className="px-8 py-4 rounded-xl bg-[#EA580C] hover:bg-[#c2410c] text-white font-black text-xs sm:text-sm uppercase tracking-wider transition-all shadow-lg hover:shadow-orange-500/20 active:scale-95 flex items-center gap-2 cursor-pointer"
+                className="flex-1 sm:flex-initial px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-[#EA580C] hover:bg-[#c2410c] text-white font-black text-xs sm:text-sm uppercase tracking-wider transition-all shadow-lg hover:shadow-orange-500/20 active:scale-95 flex items-center justify-center gap-2 cursor-pointer"
               >
                 <span>SHOP NOW</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
 
               <div
-                className={`flex items-baseline gap-2 px-4 py-3 rounded-xl border transition ${
+                className={`flex items-baseline gap-2 px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl border transition ${
                   theme === "dark" ? "bg-zinc-900 border-zinc-800" : "bg-zinc-100 border-zinc-300 shadow-xs"
                 }`}
               >
-                <span className={`text-lg font-black ${theme === "dark" ? "text-[#A3E635]" : "text-emerald-600"}`}>
+                <span className={`text-base sm:text-lg font-black ${theme === "dark" ? "text-[#A3E635]" : "text-emerald-600"}`}>
                   ₹1,299
                 </span>
-                <span className={`text-xs line-through ${theme === "dark" ? "text-zinc-500" : "text-zinc-400"}`}>
+                <span className={`text-[11px] sm:text-xs line-through ${theme === "dark" ? "text-zinc-500" : "text-zinc-400"}`}>
                   MRP ₹1,999
                 </span>
-                <span className="text-[10px] font-black uppercase text-emerald-500 bg-emerald-500/15 px-2 py-0.5 rounded border border-emerald-500/30">
+                <span className="text-[9px] font-black uppercase text-emerald-500 bg-emerald-500/15 px-1.5 py-0.5 rounded border border-emerald-500/30">
                   Save 35%
                 </span>
               </div>
@@ -101,16 +101,16 @@ export function FuelHero({ onShopNow }: FuelHeroProps) {
           </div>
 
           {/* Right Column: Studio Packshot with 3D Glowing Pedestal */}
-          <div className="lg:col-span-5 relative flex items-center justify-center pt-6 lg:pt-0">
-            <div className="relative w-full max-w-md h-80 sm:h-96 lg:h-[460px] flex items-center justify-center">
+          <div className="lg:col-span-5 relative flex items-center justify-center pt-2 sm:pt-6 lg:pt-0">
+            <div className="relative w-full max-w-sm sm:max-w-md h-64 sm:h-96 lg:h-[460px] flex items-center justify-center">
               {/* 3D Glowing Ambient Halo */}
               <div className="absolute inset-0 bg-radial from-[#A3E635]/20 via-[#EA580C]/10 to-transparent rounded-full blur-2xl pointer-events-none" />
 
               {/* 3D Illuminated Floating Floor Pedestal */}
-              <div className="absolute bottom-6 w-72 sm:w-80 h-16 bg-gradient-to-r from-[#A3E635]/25 via-[#EA580C]/35 to-[#A3E635]/25 rounded-full blur-xl pointer-events-none animate-pulse" />
-              <div className="absolute bottom-10 w-64 sm:w-72 h-7 border border-[#A3E635]/50 rounded-full shadow-[0_0_25px_#A3E635] pointer-events-none" />
+              <div className="absolute bottom-4 sm:bottom-6 w-60 sm:w-80 h-12 sm:h-16 bg-gradient-to-r from-[#A3E635]/25 via-[#EA580C]/35 to-[#A3E635]/25 rounded-full blur-xl pointer-events-none animate-pulse" />
+              <div className="absolute bottom-7 sm:bottom-10 w-52 sm:w-72 h-5 sm:h-7 border border-[#A3E635]/50 rounded-full shadow-[0_0_25px_#A3E635] pointer-events-none" />
               <div
-                className={`absolute bottom-12 w-48 sm:w-56 h-3 rounded-full blur-sm pointer-events-none ${
+                className={`absolute bottom-9 sm:bottom-12 w-40 sm:w-56 h-2 sm:h-3 rounded-full blur-xs pointer-events-none ${
                   theme === "dark" ? "bg-black/90" : "bg-zinc-400/60"
                 }`}
               />
@@ -129,37 +129,37 @@ export function FuelHero({ onShopNow }: FuelHeroProps) {
 
               {/* Floating Active Dose Stats Pill */}
               <div
-                className={`absolute -bottom-2 sm:bottom-2 left-2 sm:left-4 z-20 backdrop-blur-md border rounded-2xl p-3 shadow-2xl card-3d-glow ${
+                className={`absolute -bottom-3 sm:bottom-2 left-1/2 -translate-x-1/2 sm:translate-x-0 sm:left-4 z-20 backdrop-blur-md border rounded-2xl p-2 sm:p-3 shadow-2xl card-3d-glow whitespace-nowrap ${
                   theme === "dark" ? "bg-zinc-950/95 border-zinc-700" : "bg-white/95 border-zinc-200"
                 }`}
               >
-                <div className="flex items-center gap-3 text-center">
+                <div className="flex items-center gap-2 sm:gap-3 text-center">
                   <div>
                     <span className="block text-xs sm:text-sm font-black text-[#A3E635]">1.5G</span>
-                    <span className={`text-[9px] uppercase tracking-wider ${theme === "dark" ? "text-zinc-400" : "text-zinc-500"}`}>
+                    <span className={`text-[8px] sm:text-[9px] uppercase tracking-wider ${theme === "dark" ? "text-zinc-400" : "text-zinc-500"}`}>
                       Citrulline
                     </span>
                   </div>
-                  <div className={`w-px h-6 ${theme === "dark" ? "bg-zinc-800" : "bg-zinc-200"}`} />
+                  <div className={`w-px h-5 sm:h-6 ${theme === "dark" ? "bg-zinc-800" : "bg-zinc-200"}`} />
                   <div>
                     <span className={`block text-xs sm:text-sm font-black ${theme === "dark" ? "text-white" : "text-zinc-900"}`}>
                       2.0G
                     </span>
-                    <span className={`text-[9px] uppercase tracking-wider ${theme === "dark" ? "text-zinc-400" : "text-zinc-500"}`}>
+                    <span className={`text-[8px] sm:text-[9px] uppercase tracking-wider ${theme === "dark" ? "text-zinc-400" : "text-zinc-500"}`}>
                       Arginine
                     </span>
                   </div>
-                  <div className={`w-px h-6 ${theme === "dark" ? "bg-zinc-800" : "bg-zinc-200"}`} />
+                  <div className={`w-px h-5 sm:h-6 ${theme === "dark" ? "bg-zinc-800" : "bg-zinc-200"}`} />
                   <div>
                     <span className="block text-xs sm:text-sm font-black text-[#EA580C]">195MG</span>
-                    <span className={`text-[9px] uppercase tracking-wider ${theme === "dark" ? "text-zinc-400" : "text-zinc-500"}`}>
+                    <span className={`text-[8px] sm:text-[9px] uppercase tracking-wider ${theme === "dark" ? "text-zinc-400" : "text-zinc-500"}`}>
                       Caffeine
                     </span>
                   </div>
-                  <div className={`w-px h-6 ${theme === "dark" ? "bg-zinc-800" : "bg-zinc-200"}`} />
+                  <div className={`w-px h-5 sm:h-6 ${theme === "dark" ? "bg-zinc-800" : "bg-zinc-200"}`} />
                   <div>
                     <span className="block text-xs sm:text-sm font-black text-emerald-500">35</span>
-                    <span className={`text-[9px] uppercase tracking-wider ${theme === "dark" ? "text-zinc-400" : "text-zinc-500"}`}>
+                    <span className={`text-[8px] sm:text-[9px] uppercase tracking-wider ${theme === "dark" ? "text-zinc-400" : "text-zinc-500"}`}>
                       Servings
                     </span>
                   </div>
@@ -167,7 +167,7 @@ export function FuelHero({ onShopNow }: FuelHeroProps) {
               </div>
 
               {/* Top Bestseller Badge with 3D Shine */}
-              <div className="absolute top-2 right-2 sm:right-4 z-20 px-3 py-1 rounded-full bg-[#EA580C] text-white font-black text-[10px] uppercase tracking-wider shadow-lg shadow-orange-950/40">
+              <div className="absolute top-1 sm:top-2 right-1 sm:right-4 z-20 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-[#EA580C] text-white font-black text-[9px] sm:text-[10px] uppercase tracking-wider shadow-lg shadow-orange-950/40">
                 ⚡ #1 Bestseller
               </div>
             </div>

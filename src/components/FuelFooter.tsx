@@ -16,10 +16,10 @@ export function FuelFooter() {
 
   return (
     <footer className="bg-black text-white border-t border-zinc-900 font-sans text-xs">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 lg:gap-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-10">
           {/* Col 1: Brand Info */}
-          <div className="col-span-2 space-y-4">
+          <div className="col-span-2 space-y-3 sm:space-y-4">
             <div>
               <span className="text-xl sm:text-2xl font-black italic tracking-tighter uppercase leading-none block">
                 S.K <span className="text-[#A3E635]">NUTRITION</span>
@@ -184,10 +184,10 @@ export function FuelFooter() {
         </div>
 
         {/* Payment Badges & Bottom Strip */}
-        <div className="pt-10 mt-10 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-zinc-500 text-[11px]">
+        <div className="pt-6 sm:pt-10 mt-6 sm:mt-10 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-zinc-500 text-[11px] text-center sm:text-left">
           <p>© {new Date().getFullYear()} S.K NUTRITION. All Rights Reserved. Exclusively Peakvitals Pre-Workout.</p>
 
-          <div className="flex flex-wrap items-center gap-2 text-zinc-400 font-bold">
+          <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 text-zinc-400 font-bold">
             <span className="px-2 py-1 rounded bg-zinc-900 border border-zinc-800 text-[10px] text-emerald-400">
               💬 Direct WhatsApp Order
             </span>

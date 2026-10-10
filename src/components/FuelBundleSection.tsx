@@ -19,13 +19,13 @@ export function FuelBundleSection() {
 
   return (
     <section
-      className={`py-14 sm:py-18 border-b font-sans transition-colors duration-300 ${
+      className={`py-8 sm:py-16 border-b font-sans transition-colors duration-300 ${
         theme === "dark" ? "bg-black border-zinc-900 text-white" : "bg-zinc-100 border-zinc-200 text-zinc-900"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
-          className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center rounded-3xl p-6 sm:p-10 border shadow-2xl relative overflow-hidden transition-colors ${
+          className={`grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-center rounded-2xl sm:rounded-3xl p-4 sm:p-10 border shadow-xl sm:shadow-2xl relative overflow-hidden transition-colors ${
             theme === "dark" ? "bg-zinc-950 border-zinc-800 text-white" : "bg-white border-zinc-200 text-zinc-900"
           }`}
         >
@@ -34,14 +34,14 @@ export function FuelBundleSection() {
 
           {/* Left: Twin Pack Visual with 3D Shining Pedestal */}
           <div
-            className={`lg:col-span-5 relative flex items-center justify-center p-[2px] rounded-3xl animate-border-shine card-3d-glow ${
+            className={`lg:col-span-5 relative flex items-center justify-center p-[1.5px] rounded-2xl sm:rounded-3xl card-3d-glow ${
               theme === "dark"
                 ? "bg-gradient-to-br from-zinc-700 via-zinc-800 to-zinc-900"
                 : "bg-gradient-to-br from-zinc-300 via-zinc-200 to-zinc-400 shadow-md"
             }`}
           >
             <div
-              className={`w-full rounded-[22px] p-4 relative overflow-hidden flex items-center justify-center min-h-[300px] ${
+              className={`w-full rounded-[14px] sm:rounded-[22px] p-3 sm:p-4 relative overflow-hidden flex items-center justify-center min-h-[220px] sm:min-h-[300px] ${
                 theme === "dark"
                   ? "bg-gradient-to-b from-zinc-900 via-zinc-950 to-black"
                   : "bg-gradient-to-b from-zinc-100 via-zinc-50 to-zinc-200/50"
@@ -51,12 +51,12 @@ export function FuelBundleSection() {
               <div className="absolute inset-0 bg-radial from-[#EA580C]/25 via-[#A3E635]/15 to-transparent pointer-events-none" />
               {/* 3D Floor contact shadow */}
               <div
-                className={`absolute bottom-4 w-4/5 h-4 rounded-full blur-md ${
+                className={`absolute bottom-3 sm:bottom-4 w-4/5 h-3 sm:h-4 rounded-full blur-md ${
                   theme === "dark" ? "bg-black/95" : "bg-zinc-400/60"
                 }`}
               />
 
-              <div className="relative w-full h-64 sm:h-72">
+              <div className="relative w-full h-48 sm:h-72">
                 <Image
                   src="/images/peakvitals_trans/twin_pack.png"
                   alt="Peakvitals Twin Pack Value Bundle"

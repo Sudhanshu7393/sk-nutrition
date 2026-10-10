@@ -132,16 +132,16 @@ export const CheckoutModal: React.FC = () => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-200">
-      <div className="relative w-full max-w-xl max-h-[92vh] overflow-y-auto bg-white border border-gray-200 rounded-3xl shadow-2xl p-6 sm:p-8 text-gray-900 font-sans">
+      <div className="relative w-full max-w-xl max-h-[92vh] overflow-y-auto bg-white border border-gray-200 rounded-2xl sm:rounded-3xl shadow-2xl p-4 sm:p-8 text-gray-900 font-sans">
         {/* Close Button */}
         <button
           onClick={() => setIsCheckoutOpen(false)}
-          className="absolute top-4 right-4 p-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-500 hover:text-gray-900 transition-colors"
+          className="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 p-1.5 sm:p-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-500 hover:text-gray-900 transition-colors"
         >
-          <X className="w-5 h-5" />
+          <X className="w-4 h-4 sm:w-5 sm:h-5" />
         </button>
 
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-6">
           {/* Header */}
           <div>
             <div className="flex items-center gap-2 text-orange-600 text-xs font-black uppercase tracking-wider">

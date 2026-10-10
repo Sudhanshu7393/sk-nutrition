@@ -38,11 +38,11 @@ export function FuelFaqSection() {
 
   return (
     <section
-      className={`py-14 sm:py-20 border-b font-sans transition-colors duration-300 ${
+      className={`py-8 sm:py-16 border-b font-sans transition-colors duration-300 ${
         theme === "dark" ? "bg-zinc-950 border-zinc-800 text-white" : "bg-zinc-100 border-zinc-200 text-zinc-900"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5 sm:space-y-8">
         {/* Header */}
         <div className="text-center space-y-2">
           <h2
