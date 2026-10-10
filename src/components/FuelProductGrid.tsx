@@ -216,11 +216,7 @@ export function FuelProductGrid({
                         />
 
                         {/* 3D Contact Floor Shadow */}
-                        <div
-                          className={`absolute bottom-1.5 sm:bottom-2.5 w-3/4 h-2 sm:h-3 rounded-full blur-xs ${
-                            theme === "dark" ? "bg-black/95" : "bg-zinc-400/60"
-                          }`}
-                        />
+                        <div className="absolute bottom-1.5 sm:bottom-2.5 w-3/4 h-2 sm:h-3 rounded-full blur-sm bg-black/20 dark:bg-black/75 pointer-events-none" />
 
                         {/* Realistic Transparent Packshot */}
                         <Image

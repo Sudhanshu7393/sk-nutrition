@@ -49,12 +49,8 @@ export function FuelBundleSection() {
             >
               {/* 3D Radial Glow */}
               <div className="absolute inset-0 bg-radial from-[#EA580C]/25 via-[#A3E635]/15 to-transparent pointer-events-none" />
-              {/* 3D Floor contact shadow */}
-              <div
-                className={`absolute bottom-3 sm:bottom-4 w-4/5 h-3 sm:h-4 rounded-full blur-md ${
-                  theme === "dark" ? "bg-black/95" : "bg-zinc-400/60"
-                }`}
-              />
+              {/* Natural Floor Shadow */}
+              <div className="absolute bottom-3 sm:bottom-4 w-4/5 h-3 sm:h-4 bg-black/25 dark:bg-black/80 rounded-full blur-md pointer-events-none" />
 
               <div className="relative w-full h-48 sm:h-72">
                 <Image

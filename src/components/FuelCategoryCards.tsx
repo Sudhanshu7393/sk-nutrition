@@ -100,12 +100,8 @@ export function FuelCategoryCards() {
                 >
                   {/* Subtle radial glow */}
                   <div className="absolute inset-0 bg-radial from-[#A3E635]/20 to-transparent pointer-events-none group-hover:scale-125 transition-transform duration-500" />
-                  {/* 3D floor shadow */}
-                  <div
-                    className={`absolute bottom-1 w-3/4 h-2 rounded-full blur-xs ${
-                      theme === "dark" ? "bg-black/95" : "bg-zinc-400/60"
-                    }`}
-                  />
+                  {/* Natural floor shadow */}
+                  <div className="absolute bottom-1 w-3/4 h-2 bg-black/20 dark:bg-black/80 rounded-full blur-xs pointer-events-none" />
 
                   <Image
                     src={c.img}
