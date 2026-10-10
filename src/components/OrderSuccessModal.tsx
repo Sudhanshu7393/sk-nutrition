@@ -26,8 +26,8 @@ export const OrderSuccessModal: React.FC = () => {
     `👤 *Name:* ${activeOrder.customerName}\n` +
     `🏠 *Delivery Address:* ${activeOrder.customerAddress}, ${activeOrder.city}${activeOrder.pincode ? ` (${activeOrder.pincode})` : ""}\n` +
     `💰 *Total Amount:* ₹${activeOrder.total.toLocaleString("en-IN")}\n` +
-    `💳 *Payment Mode:* ${activeOrder.paymentMethod === "cod" ? "Cash on Delivery (COD)" : "Pay on Delivery"}\n\n` +
-    `🚚 Please confirm my order dispatch timing and share courier tracking updates. Thank you!`
+    `💳 *Payment Mode:* Direct WhatsApp Order & UPI QR Deal\n` +
+    `📱 Please share your official UPI QR code here so I can complete payment and get dispatch tracking. Thank you!`
   )}`;
 
   return (

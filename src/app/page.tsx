@@ -90,7 +90,7 @@ export default function HomePage() {
       {/* 8. Frequently Asked Questions */}
       <FuelFaqSection />
 
-      {/* 9. Clean Dark Footer (Store Address, Mughalsarai, COD, Helpline) */}
+      {/* 9. Clean Dark Footer (Store Address, Mughalsarai, WhatsApp Order, Helpline) */}
       <FuelFooter />
 
       {/* Interactive Modals */}

@@ -145,7 +145,7 @@ export const Footer: React.FC<FooterProps> = ({
               [🟢] 100% Vegetarian Supplements
             </span>
             <span>•</span>
-            <span>Cash on Delivery (COD) &amp; UPI</span>
+            <span>Direct WhatsApp Order &amp; UPI QR Deal</span>
             <span>•</span>
             <span>Mughalsarai, Uttar Pradesh</span>
           </div>

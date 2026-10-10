@@ -229,7 +229,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
       message += `Hello S.K Nutrition! 👋\n\n`;
       message += `I want to order *Peakvitals Nutrition Pre-Workout*.\n\n`;
       message += `🔥 *Flavours Available:* Green Apple | Blue Razz | Watermelon | Tangy Orange | Twin Pack Bundle\n`;
-      message += `💳 *Payment:* Cash on Delivery (COD) / UPI\n\n`;
+      message += `💳 *Payment & Deal:* Direct WhatsApp Order (Please send UPI QR code)\n\n`;
       message += `Please confirm stock availability and fastest delivery time. Thank you!`;
     } else {
       message += `📦 *ORDER ITEMS:*\n`;
@@ -245,7 +245,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
       if (discount > 0) message += `🎟️ *Coupon (${appliedCoupon}):* -₹${discount.toLocaleString("en-IN")}\n`;
       message += `🚚 *Delivery Fee:* ${deliveryFee === 0 ? "FREE (All India)" : `₹${deliveryFee}`}\n`;
       message += `💰 *TOTAL PAYABLE: ₹${cartTotal.toLocaleString("en-IN")}*\n`;
-      message += `💳 *Payment Method:* Cash on Delivery (COD) / UPI\n`;
+      message += `💳 *Payment Mode:* Direct WhatsApp Order & UPI QR Deal\n`;
       message += `━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
 
       if (customerDetails) {
@@ -256,7 +256,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
         message += `📮 *PIN Code:* ${pincode || "232101"}\n`;
         message += `━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
       }
-      message += `\n✅ Please confirm and dispatch my 100% Genuine Peakvitals Pre-Workout order. Thank you!`;
+      message += `\n📱 Please share your official UPI QR code here so I can pay and confirm dispatch. Thank you!`;
     }
 
     return `https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;

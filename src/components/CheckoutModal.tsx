@@ -8,11 +8,8 @@ import {
   X,
   ShieldCheck,
   Truck,
-  CreditCard,
-  Banknote,
   MessageCircle,
   MapPin,
-  CheckCircle2,
 } from "lucide-react";
 
 export const CheckoutModal: React.FC = () => {
@@ -39,7 +36,7 @@ export const CheckoutModal: React.FC = () => {
   const [address, setAddress] = useState("");
   const [landmark, setLandmark] = useState("");
   const [city, setCity] = useState("Mughalsarai, Uttar Pradesh");
-  const [paymentMethod, setPaymentMethod] = useState<"cod" | "upi" | "whatsapp">("cod");
+  const paymentMethod = "whatsapp";
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   React.useEffect(() => {
@@ -106,32 +103,30 @@ export const CheckoutModal: React.FC = () => {
       setIsSubmitting(false);
       setIsCheckoutOpen(false);
 
-      if (paymentMethod === "whatsapp") {
-        let message = `🛒 *NEW ORDER CONFIRMED - ${SITE_CONFIG.name}*\n`;
-        message += `📍 *Ravi Nagar, Mughalsarai (Authorised Peakvitals Partner)*\n`;
-        message += `━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
-        message += `🆔 *Order ID:* #${orderId}\n`;
-        message += `👤 *Customer Name:* ${name}\n`;
-        message += `📞 *Phone Number:* ${phone}\n`;
-        message += `🏠 *Delivery Address:* ${address}, ${landmark ? landmark + ", " : ""}${city}\n`;
-        message += `📮 *PIN Code:* ${pincode}\n`;
-        message += `💳 *Payment Mode:* Cash on Delivery (COD) / Pay on Delivery\n`;
-        message += `━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
-        message += `📦 *ITEMS ORDERED:*\n`;
-        newOrder.items.forEach((item, idx) => {
-          message += `${idx + 1}️⃣ *${item.product.name}*\n`;
-          message += `   • Flavour: ${item.flavor} | ${item.weight}\n`;
-          message += `   • Qty: ${item.quantity} x ₹${item.price.toLocaleString("en-IN")} = ₹${(item.price * item.quantity).toLocaleString("en-IN")}\n\n`;
-        });
-        message += `━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
-        message += `💰 *TOTAL PAYABLE: ₹${cartTotal.toLocaleString("en-IN")}*\n`;
-        message += `🚚 *Delivery Status:* Dispatched via Express Courier\n`;
-        message += `━━━━━━━━━━━━━━━━━━━━━━━━━\n\n`;
-        message += `✅ Please confirm and dispatch my 100% Genuine Peakvitals Pre-Workout order. Thank you!`;
+      let message = `🛒 *NEW ORDER - ${SITE_CONFIG.name}*\n`;
+      message += `📍 *Ravi Nagar, Mughalsarai (Authorised Peakvitals Partner)*\n`;
+      message += `━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+      message += `🆔 *Order ID:* #${orderId}\n`;
+      message += `👤 *Customer Name:* ${name}\n`;
+      message += `📞 *Phone Number:* ${phone}\n`;
+      message += `🏠 *Delivery Address:* ${address}, ${landmark ? landmark + ", " : ""}${city}\n`;
+      message += `📮 *PIN Code:* ${pincode}\n`;
+      message += `━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+      message += `📦 *ITEMS ORDERED:*\n`;
+      newOrder.items.forEach((item, idx) => {
+        message += `${idx + 1}️⃣ *${item.product.name}*\n`;
+        message += `   • Flavour: ${item.flavor} | ${item.weight}\n`;
+        message += `   • Qty: ${item.quantity} x ₹${item.price.toLocaleString("en-IN")} = ₹${(item.price * item.quantity).toLocaleString("en-IN")}\n\n`;
+      });
+      message += `━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+      message += `💰 *TOTAL PAYABLE: ₹${cartTotal.toLocaleString("en-IN")}*\n`;
+      message += `🚚 *Delivery Status:* Direct Fast Dispatch via Express Courier\n`;
+      message += `━━━━━━━━━━━━━━━━━━━━━━━━━\n\n`;
+      message += `📱 *PAYMENT & ORDER CONFIRMATION:*\n`;
+      message += `Please share your official UPI QR Code / Payment details here so I can pay and confirm my order dispatch. Thank you!`;
 
-        const waUrl = `https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
-        window.open(waUrl, "_blank");
-      }
+      const waUrl = `https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
+      window.open(waUrl, "_blank");
     }, 600);
   };
 
@@ -157,7 +152,7 @@ export const CheckoutModal: React.FC = () => {
               Checkout & Delivery Details
             </h2>
             <p className="text-xs text-gray-500 mt-0.5">
-              Enter delivery details for 100% Genuine Peakvitals Pre-Workout. Cash on Delivery (COD) & UPI available.
+              Enter delivery details for 100% Genuine Peakvitals Pre-Workout. We confirm details directly on WhatsApp & share our UPI QR code before dispatch.
             </p>
           </div>
 
@@ -237,7 +232,7 @@ export const CheckoutModal: React.FC = () => {
                 </div>
                 <div className="flex flex-wrap items-center gap-2 text-[11px] text-gray-600 pt-0.5">
                   <span className="font-semibold text-gray-800">{pincodeInfo.deliveryTime}</span>
-                  <span>• COD Available 🟢</span>
+                  <span>• Direct WhatsApp QR Order 💬</span>
                   <span>• Free Delivery Above ₹999</span>
                 </div>
               </div>
@@ -286,77 +281,20 @@ export const CheckoutModal: React.FC = () => {
               </div>
             </div>
 
-            {/* Payment Method Selection */}
+            {/* Direct WhatsApp Ordering Notice */}
             <div className="pt-2">
-              <label className="text-xs font-bold text-gray-800 uppercase tracking-wider block mb-2">
-                Select Payment Method:
-              </label>
-              <div className="space-y-2">
-                <label
-                  onClick={() => setPaymentMethod("cod")}
-                  className={`flex items-center gap-3 p-3 rounded-2xl border cursor-pointer transition-all ${
-                    paymentMethod === "cod"
-                      ? "bg-orange-50 border-orange-500 shadow-xs"
-                      : "bg-white border-gray-200 hover:border-gray-300"
-                  }`}
-                >
-                  <input
-                    type="radio"
-                    name="payment"
-                    checked={paymentMethod === "cod"}
-                    onChange={() => setPaymentMethod("cod")}
-                    className="accent-orange-500 w-4 h-4"
-                  />
-                  <Banknote className="w-5 h-5 text-emerald-600" />
-                  <div className="flex-1">
-                    <p className="text-xs font-bold text-gray-900">Cash / UPI on Delivery (COD)</p>
-                    <p className="text-[11px] text-gray-500">Pay cash or UPI scanner when supplements arrive at doorstep</p>
-                  </div>
-                </label>
-
-                <label
-                  onClick={() => setPaymentMethod("upi")}
-                  className={`flex items-center gap-3 p-3 rounded-2xl border cursor-pointer transition-all ${
-                    paymentMethod === "upi"
-                      ? "bg-purple-50 border-purple-500 shadow-xs"
-                      : "bg-white border-gray-200 hover:border-gray-300"
-                  }`}
-                >
-                  <input
-                    type="radio"
-                    name="payment"
-                    checked={paymentMethod === "upi"}
-                    onChange={() => setPaymentMethod("upi")}
-                    className="accent-purple-600 w-4 h-4"
-                  />
-                  <CreditCard className="w-5 h-5 text-purple-600" />
-                  <div className="flex-1">
-                    <p className="text-xs font-bold text-gray-900">Instant UPI (GPay / PhonePe / Paytm / BHIM)</p>
-                    <p className="text-[11px] text-gray-500">Scan QR or pay directly via UPI</p>
-                  </div>
-                </label>
-
-                <label
-                  onClick={() => setPaymentMethod("whatsapp")}
-                  className={`flex items-center gap-3 p-3 rounded-2xl border cursor-pointer transition-all ${
-                    paymentMethod === "whatsapp"
-                      ? "bg-emerald-50 border-emerald-500 shadow-xs"
-                      : "bg-white border-gray-200 hover:border-gray-300"
-                  }`}
-                >
-                  <input
-                    type="radio"
-                    name="payment"
-                    checked={paymentMethod === "whatsapp"}
-                    onChange={() => setPaymentMethod("whatsapp")}
-                    className="accent-emerald-600 w-4 h-4"
-                  />
-                  <MessageCircle className="w-5 h-5 text-emerald-600" />
-                  <div className="flex-1">
-                    <p className="text-xs font-bold text-gray-900">Confirm directly on WhatsApp</p>
-                    <p className="text-[11px] text-gray-500">Chat with store executive on 9118732066</p>
-                  </div>
-                </label>
+              <div className="p-3.5 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-start gap-3">
+                <div className="p-2 rounded-xl bg-emerald-600 text-white shrink-0 mt-0.5">
+                  <MessageCircle className="w-4 h-4" />
+                </div>
+                <div className="text-xs">
+                  <p className="font-black text-emerald-950 uppercase tracking-wide">
+                    Direct WhatsApp Order &amp; UPI QR Deal
+                  </p>
+                  <p className="text-gray-600 mt-1 leading-relaxed">
+                    Yeh order seedha hamare WhatsApp (<strong className="text-gray-800">9118732066</strong>) par jayega. Wahan hum aapko official UPI QR code bhejenge aur custom deal finalize karke fast courier dispatch karenge.
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -386,14 +324,14 @@ export const CheckoutModal: React.FC = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full py-3.5 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-black text-xs uppercase tracking-wider transition-all shadow-md active:scale-95 disabled:opacity-50 flex items-center justify-center gap-2 cursor-pointer"
+              className="w-full py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-black text-xs uppercase tracking-wider transition-all shadow-md active:scale-95 disabled:opacity-50 flex items-center justify-center gap-2 cursor-pointer"
             >
               {isSubmitting ? (
-                <span>Placing Your Order...</span>
+                <span>Opening WhatsApp...</span>
               ) : (
                 <>
-                  <CheckCircle2 className="w-4 h-4 text-white" />
-                  <span>Place Order (₹{cartTotal})</span>
+                  <MessageCircle className="w-4 h-4 text-white" />
+                  <span>Order on WhatsApp (₹{cartTotal}) • Get UPI QR</span>
                 </>
               )}
             </button>

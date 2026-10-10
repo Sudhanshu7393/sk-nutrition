@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://sk-nutrition-black.vercel.app"),
   title: "S.K NUTRITION | Official Store - Peakvitals Nutrition Pre-Workout",
   description:
-    "Buy 100% authentic Peakvitals Pre-Workout supplements at S.K NUTRITION, Ravi Nagar, Mughalsarai, Chandauli. High-stimulant, explosive nitric oxide muscle pumps, All India Express Delivery & Cash on Delivery (COD).",
+    "Buy 100% authentic Peakvitals Pre-Workout supplements at S.K NUTRITION, Ravi Nagar, Mughalsarai, Chandauli. High-stimulant, explosive nitric oxide muscle pumps, All India Express Delivery & Direct WhatsApp Order with UPI QR.",
   keywords: [
     "S.K Nutrition",
     "Peakvitals Nutrition",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     "Pre Workout Mughalsarai",
     "Supplements Chandauli",
     "Gym Supplements Ravi Nagar",
-    "Cash on Delivery Supplements",
+    "WhatsApp Supplement Order",
     "Authentic Supplements",
   ],
   authors: [{ name: "S.K Nutrition", url: "https://sk-nutrition-black.vercel.app" }],
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     siteName: "S.K NUTRITION",
     title: "S.K NUTRITION | Official Peakvitals Pre-Workout Store",
     description:
-      "100% Genuine Peakvitals Pre-Workout • Ravi Nagar, Mughalsarai • All India Express Delivery & Cash on Delivery (COD) Available.",
+      "100% Genuine Peakvitals Pre-Workout • Ravi Nagar, Mughalsarai • All India Express Delivery & Direct WhatsApp UPI QR Deal.",
     images: [
       {
         url: "/og-image.jpg",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "S.K NUTRITION | Official Peakvitals Pre-Workout Store",
     description:
-      "100% Genuine Peakvitals Pre-Workout • Ravi Nagar, Mughalsarai • Cash on Delivery (COD).",
+      "100% Genuine Peakvitals Pre-Workout • Ravi Nagar, Mughalsarai • Direct WhatsApp Order & UPI QR Deal.",
     images: ["/og-image.jpg"],
   },
   icons: {

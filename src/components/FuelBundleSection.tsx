@@ -149,7 +149,7 @@ export function FuelBundleSection() {
               </li>
               <li className="flex items-center gap-2">
                 <Check className="w-4 h-4 text-[#A3E635] shrink-0 stroke-[3]" />
-                <span>Cash on Delivery (COD)</span>
+                <span>Direct WhatsApp Order &amp; QR Deal</span>
               </li>
             </ul>
 

@@ -76,12 +76,12 @@ export function IndianPincodeChecker() {
               </span>
               <span className="text-zinc-400">•</span>
               <span className="text-emerald-500 font-bold flex items-center gap-1">
-                <CheckCircle2 className="w-3 h-3" /> COD Available
+                <CheckCircle2 className="w-3 h-3" /> Fast WhatsApp Dispatch
               </span>
             </div>
           ) : (
             <span className={theme === "dark" ? "text-zinc-400 font-medium" : "text-zinc-500 font-medium"}>
-              Check delivery speed &amp; Cash on Delivery for your pincode:
+              Check delivery speed &amp; WhatsApp dispatch for your pincode:
             </span>
           )}
         </div>

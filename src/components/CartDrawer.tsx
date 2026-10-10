@@ -296,7 +296,7 @@ export const CartDrawer: React.FC = () => {
                   }}
                   className="w-full py-3.5 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-black text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-md active:scale-95 cursor-pointer"
                 >
-                  <span>Proceed to Checkout</span>
+                  <span>Enter Address &amp; Order on WhatsApp</span>
                   <ArrowRight className="w-4 h-4 text-white" />
                 </button>
 
@@ -307,13 +307,13 @@ export const CartDrawer: React.FC = () => {
                   className="w-full py-2.5 rounded-full bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-300 font-bold text-xs uppercase tracking-wider transition-colors flex items-center justify-center gap-2"
                 >
                   <MessageCircle className="w-4 h-4" />
-                  <span>Order Directly on WhatsApp</span>
+                  <span>Direct WhatsApp Order (Fast QR Deal)</span>
                 </a>
               </div>
 
               <div className="flex items-center justify-center gap-1.5 text-[11px] text-gray-500 pt-1">
                 <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-                <span>100% Genuine Direct Supply • Cash on Delivery Available</span>
+                <span>100% Genuine Direct Supply • WhatsApp Order &amp; UPI QR Deal</span>
               </div>
             </div>
           )}

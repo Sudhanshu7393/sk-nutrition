@@ -65,8 +65,9 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
     `⚖️ *Weight:* ${selectedWeight.label}\n` +
     `🔢 *Quantity:* ${quantity}\n` +
     `💰 *Total Price:* ₹${(calculatedPrice * quantity).toLocaleString("en-IN")}\n` +
-    `🚚 *Delivery:* Cash on Delivery (COD) / Express Delivery\n\n` +
-    `Please confirm stock and dispatch schedule. Thank you!`
+    `🚚 *Delivery:* Direct Express Courier Dispatch\n` +
+    `📱 *Payment:* Please share your official UPI QR code here for payment.\n\n` +
+    `Please confirm stock and today's dispatch schedule. Thank you!`
   )}`;
 
   return (

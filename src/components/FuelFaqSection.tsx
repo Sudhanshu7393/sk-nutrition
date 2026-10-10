@@ -16,15 +16,15 @@ export function FuelFaqSection() {
     },
     {
       q: "Do you deliver all across India? How long does delivery take?",
-      a: "Yes! We deliver Peakvitals Pre-Workout across all 28,000+ PIN codes in India. Local orders in Mughalsarai (PIN 232101), Ravi Nagar, and Chandauli arrive within same-day / 24 hours. All other Indian cities and states arrive within 2 to 4 days via Express Air Courier with Cash on Delivery (COD).",
+      a: "Yes! We deliver Peakvitals Pre-Workout across all 28,000+ PIN codes in India. Local orders in Mughalsarai (PIN 232101), Ravi Nagar, and Chandauli arrive within same-day / 24 hours. All other Indian cities and states arrive within 2 to 4 days via Express Air Courier with tracking updates.",
     },
     {
       q: "What key ingredients are in Peakvitals Pre-Workout?",
       a: "Each 250g tub provides 35 clinical servings: 1.5g L-Citrulline Malate, 2.0g Arginine AAKG (for nitric oxide vascular pump), 195mg Natural Caffeine (for extreme mental focus), and 2.0g Beta-Alanine (for endurance).",
     },
     {
-      q: "What payment methods do you accept?",
-      a: "We accept Cash on Delivery (COD), UPI (Google Pay, PhonePe, Paytm, BHIM QR), and direct WhatsApp order confirmation. You can pay cash or scan the delivery rider's UPI QR upon arrival.",
+      q: "How does ordering and payment work?",
+      a: "All orders are handled directly through WhatsApp (9118732066). Once you choose your supplements and provide your delivery details, our team shares our official UPI QR code or confirms the best deal with you directly before immediate dispatch.",
     },
     {
       q: "How should I take Peakvitals for maximum results?",

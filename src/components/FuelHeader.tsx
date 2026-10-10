@@ -34,7 +34,7 @@ export function FuelHeader() {
       {/* 1. Top Announcement Bar */}
       <div className="bg-black text-[#A3E635] text-[11px] font-bold py-1.5 px-4 text-center border-b border-zinc-900 flex items-center justify-center gap-2 tracking-wider uppercase">
         <Truck className="w-3.5 h-3.5 text-[#A3E635]" />
-        <span>🇮🇳 ALL INDIA EXPRESS DELIVERY • CASH ON DELIVERY (COD) AVAILABLE • 100% GENUINE PEAKVITALS DIRECT</span>
+        <span>🇮🇳 ALL INDIA EXPRESS DELIVERY • DIRECT WHATSAPP ORDER &amp; UPI QR DEAL • 100% GENUINE PEAKVITALS DIRECT</span>
       </div>
 
       {/* 2. Main Navigation Bar */}
@@ -142,7 +142,7 @@ export function FuelHeader() {
             {/* WhatsApp Link */}
             <a
               href={`https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${encodeURIComponent(
-                "🛒 *ORDER INQUIRY - S.K NUTRITION*\n📍 *Ravi Nagar, Mughalsarai*\n━━━━━━━━━━━━━━━━━━━━━\nHello S.K Nutrition! 👋\n\nI want to order *Peakvitals Nutrition Pre-Workout* (₹1,299 with All India Express Delivery & Cash on Delivery).\n\nPlease share available flavours & confirm my order!"
+                "🛒 *ORDER INQUIRY - S.K NUTRITION*\n📍 *Ravi Nagar, Mughalsarai*\n━━━━━━━━━━━━━━━━━━━━━\nHello S.K Nutrition! 👋\n\nI want to order *Peakvitals Nutrition Pre-Workout* (₹1,299 with All India Express Delivery & Fast WhatsApp QR Deal).\n\nPlease share available flavours & your UPI QR code!"
               )}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -327,7 +327,7 @@ export function FuelHeader() {
             <div className="pt-3 border-t border-zinc-800">
               <a
                 href={`https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${encodeURIComponent(
-                  "🛒 *ORDER INQUIRY - S.K NUTRITION*\n📍 *Ravi Nagar, Mughalsarai*\n━━━━━━━━━━━━━━━━━━━━━\nHello S.K Nutrition! 👋\n\nI want to order *Peakvitals Nutrition Pre-Workout* (₹1,299 with All India Express Delivery & Cash on Delivery).\n\nPlease share available flavours & confirm my order!"
+                  "🛒 *ORDER INQUIRY - S.K NUTRITION*\n📍 *Ravi Nagar, Mughalsarai*\n━━━━━━━━━━━━━━━━━━━━━\nHello S.K Nutrition! 👋\n\nI want to order *Peakvitals Nutrition Pre-Workout* (₹1,299 with All India Express Delivery & Fast WhatsApp QR Deal).\n\nPlease share available flavours & your UPI QR code!"
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"

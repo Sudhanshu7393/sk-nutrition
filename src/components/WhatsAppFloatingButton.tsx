@@ -25,9 +25,9 @@ export const WhatsAppFloatingButton: React.FC = () => {
       `3️⃣ Watermelon Pump (250g) — ₹1,299\n` +
       `4️⃣ Tangy Orange (250g) — ₹1,299\n` +
       `5️⃣ Twin Pack Bundle (+ Free S.K Shaker Bottle) — ₹2,399\n\n` +
-      `🚚 *Delivery:* All India Express / Cash on Delivery (COD)\n` +
+      `🚚 *Delivery:* All India Express Dispatch\n` +
       `📍 *My City / PIN Code:* [Enter City/PIN]\n\n` +
-      `Please confirm stock availability and today's dispatch time. Thank you!`;
+      `Please confirm stock & share your UPI QR code for order confirmation. Thank you!`;
 
     return `https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
   };

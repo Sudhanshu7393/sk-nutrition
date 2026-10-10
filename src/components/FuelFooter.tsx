@@ -177,7 +177,7 @@ export function FuelFooter() {
                 <span className="text-zinc-500">Same-Day Mughalsarai Dispatch</span>
               </li>
               <li>
-                <span className="text-zinc-500">Cash on Delivery (COD)</span>
+                <span className="text-zinc-500">Direct WhatsApp Order &amp; QR Deal</span>
               </li>
             </ul>
           </div>
@@ -188,11 +188,11 @@ export function FuelFooter() {
           <p>© {new Date().getFullYear()} S.K NUTRITION. All Rights Reserved. Exclusively Peakvitals Pre-Workout.</p>
 
           <div className="flex flex-wrap items-center gap-2 text-zinc-400 font-bold">
-            <span className="px-2 py-1 rounded bg-zinc-900 border border-zinc-800 text-[10px]">
-              💵 Cash on Delivery
+            <span className="px-2 py-1 rounded bg-zinc-900 border border-zinc-800 text-[10px] text-emerald-400">
+              💬 Direct WhatsApp Order
             </span>
             <span className="px-2 py-1 rounded bg-zinc-900 border border-zinc-800 text-[10px]">
-              📱 UPI / GPay / PhonePe
+              📱 UPI QR on WhatsApp
             </span>
             <span className="px-2 py-1 rounded bg-zinc-900 border border-zinc-800 text-[10px] text-emerald-400">
               [🟢] 100% Vegetarian
